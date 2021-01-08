@@ -1,0 +1,99 @@
+body {
+    background-color: rgba(218, 214, 214);
+}
+
+form {
+    border-radius: 10px;
+    width: 65%;
+    margin-left: 17.5%;
+    margin-right: 17.5%;
+    background: white;
+    padding-bottom: 150px;
+}
+
+h1 {
+    padding-top: 45px;
+    padding-left: 8%;
+    padding-bottom: 3%;
+    width: 70%;
+    font-weight: lighter;
+    font-family: 'Franklin Gothic Medium', 'Arial wide', Arial, sans-serif;
+    white-space: nowrap;
+}
+
+p {
+    padding-left: 5%;
+    font-weight: lighter;
+    font-family: 'Franklin Gothic', 'Arial wide', Arial, sans-serif;
+    font-size: 10px;
+}
+
+label {
+    padding-left: 5%;
+    width: 100%;
+}
+
+input[type=text],
+input[type=password] {
+    width: 90%;
+    padding: 12px 20px;
+    margin: 0px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 30px;
+}
+
+input[type=text] {
+    margin-bottom: 20px;
+}
+
+input[type=password] {
+    margin-bottom: 10px;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px green;
+}
+
+button {
+    background-color: rgb(29, 27, 27);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 25%;
+    margin-left: 10%;
+    border-radius: 20px;
+    float: left;
+    margin-top: 50px;
+}
+
+button:hover {
+    opacity: 2;
+    color: whitesmoke;
+    background-color: rgb(56, 56, 56);
+}
+
+span.psw {
+    float: right;
+    padding-right: 11.5%;
+    font-weight: lighter;
+    font-family: 'Franklin Gothic', 'Arial wide', Arial, sans-serif;
+    font-size: 15px;
+    padding-top: 15px;
+}
+
+a:link {
+    color: gray
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    color: green;
+}

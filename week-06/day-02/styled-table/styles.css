@@ -1,0 +1,40 @@
+body {
+    background-color: #00aff9;
+}
+
+thead {
+    background-color: #222;
+    color: whitesmoke;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 10cm;
+    border-color: lightslategray;
+    text-align: left;
+    width: 100%;
+}
+
+table td {
+    padding: 15px 30px;
+    background: whitesmoke;
+}
+
+table th {
+    background: #303933;
+    padding: 15px;
+    color: whitesmoke;
+}
+
+table tr:nth-child(odd) td {
+    background: #dddddd;
+}
+
+table,
+td {
+    border: 1px solid silver;
+}
+
+table thead tr th {
+    border-bottom: 5px solid slategrey;
+}

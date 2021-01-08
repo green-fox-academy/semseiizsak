@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Thymeleaf Exercise #</title>
+    <link rel="stylesheet" th:href="@{/style.css}" />
+    <meta charset="utf-8" />
+</head>
+<body>
+
+<h1>Welcome to the Safari!</h1>
+<br>
+<div>
+    <h3 class = glow> Our loyal customers: </h3>
+    <table>
+    <tr th:each="bankAccount : ${bankAccountList}">
+        <td th:style="${bankAccount.getKing()}">
+        <td th:text="${bankAccountStat.index + 1}">
+        <td th:text="${bankAccount.name}">
+        <td th:text="' ' + ${bankAccount.getDebt()} + ' ' + ${bankAccount.balance} + ' '">
+        <td th:text="'  ' + ${bankAccount.currency}">
+        <td th:text="' / ' + ${bankAccount.animalType} + ' / '">
+    </table>
+</div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Thymeleaf Exercise #</title>
+    <link rel="stylesheet" th:href="@{/style.css}" />
+    <meta charset="utf-8" />
+</head>
+<body>
+
+<h1>Welcome to the Safari!</h1>
+<br>
+<div>
+    <h3> You'll see some of the accounts something like this: </h3>
+    <div th:each="bankAccount : ${bankAccountList}">
+        <p th:text="${bankAccount.name} + ' - ' + ${bankAccount.balance} + ' / ' + ${bankAccount.animalType} + ' /'">
+        </p>
+    </div>
+</div>
+</body>
+</html>
