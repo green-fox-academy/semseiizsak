@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login page</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+    <IMG SRC="/3dgifmaker76710.gif" class="float-right">
+    <h2 class="container clearfix" >Aww look, he's so exited.</h2>
+
+    <h2>You came back to your pal!</h2>
+    <p>Please enter it's name:</p>
+        <form action="/user" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+            <input type="submit" value="Check on it">
+            <button onclick="location.href='/user'">I ALREADY HAVE A PAL</button>
+
+
+</body>
+
+</html>

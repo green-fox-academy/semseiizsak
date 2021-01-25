@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>hey there</title>
+</head>
+<body>
+<ul>
+    <li>Information</li>
+
+</ul>
+<IMG SRC="/greenfox-2.png">
+<p> This is <span th:text="${name}"></span> Currently living on  . </span> He knows <span th:text="${foodList.size()}"></span> tricks.</p>
+
+    <label for="food">Choose a food:</label>
+    <select name="type" id="food">
+        <option th:text="${Food}" th:value="${Food}" th:each="Food: ${foodList}">
+    </select>
+    <button type="submit"> EAT FAT CUCK</button>
+    <br>
+    <label for="drink">Choose a drink:</label>
+    <select name="type" id="drink">
+        <option th:text="${Drink}" th:value="${Drink}" th:each="Drink: ${drinkList}">
+    </select>
+    <button type="submit"> DRINK SORRY ASS</button>
+
+
+</body>
+</html>

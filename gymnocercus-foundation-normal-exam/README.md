@@ -58,7 +58,7 @@ The application should write the data to the console as *key => value* pairs.
 
 #### Example
 
-[Example file can be found here.](./results.txt)
+[Example file can be found here.](src/AverageTemperature/results.txt)
 
 Output
 
@@ -149,5 +149,19 @@ pokedex
 - Solution:
 
 ```text
-*type your answer here*
+i.   $ git init
+     $ git add .
+     $ git commit -m 'added generation-i/'
+     $ git remote add origin <https://github.com/semseiizsak/gymnocercus-foundation-normal-exam>
+     $ git push -u origin master
+ii.  $ git mv water/pyduck.md water/psyduck.md
+iii. $ git mkdir flying
+iv.  $ git mv fire/pidgey.md flying/pidgey.md
+v.   $ git mv water/spearow.md flying/spearow.md
+vi.  $ git touch my-pokemon.txt
+vii. $ git dir /s >my-pokemon.txt
+viii.$ cd fire
+     $ git add .
+     $ git commit -m 'moved flying type pokemon from flixing dir, and listed all the files in my-pokemon.txt'
+
 ```

@@ -4,7 +4,6 @@ public class ShopItem {
     private String name;
     private String description;
     private Integer price;
-    //private String currency;
     private Integer quantityOfStock;
 
     //constructor
@@ -30,6 +29,7 @@ public class ShopItem {
         return price;
     }
 
+
     public Integer getQuantityOfStock() {
         return quantityOfStock;
     }
@@ -47,6 +47,8 @@ public class ShopItem {
     public void setPrice(Integer price) {
         this.price = price;
     }
+
+
 
     public void setQuantityOfStock(Integer quantityOfStock) {
         this.quantityOfStock = quantityOfStock;

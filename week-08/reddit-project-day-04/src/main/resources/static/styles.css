@@ -1,0 +1,18 @@
+h1 {
+    padding-bottom: 5%;
+}
+
+nav {
+    padding-top: 2%;
+    padding-left: 2%;
+}
+
+.jumbotron {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.table table-bordered table-hover {
+    padding-left: 5%;
+    padding-right: 5%;
+}

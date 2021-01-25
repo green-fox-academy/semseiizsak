@@ -1,10 +1,32 @@
 body {
     background-color: #fff;
+    margin: 5% 10%;
 }
 
 header {
     color: lightskyblue;
     font-family: "Arial";
+}
+
+form{
+    width: 100%;
+    padding-left: 15%;
+}
+
+label{
+    font-family: Arial;
+    font-size: 100%;
+    padding-left: 15%;
+    width: 100%;
+}
+
+input[type=search] {
+    margin: 60%;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px green;
 }
 
 header:after
@@ -66,3 +88,8 @@ nav button {
     background-color: orangered;
     color: white;
 }
+
+
+
+
+

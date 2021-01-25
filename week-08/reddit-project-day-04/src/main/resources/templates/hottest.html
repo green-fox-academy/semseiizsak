@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Wallmart reddit</title>
+    <link rel="stylesheet" href="/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" href="/">Home page</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#">Hot page</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="/registration">Registration</a>
+            </li>
+
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"
+                    data-whatever="@mdo">
+                Submit a new post
+            </button>
+        </ul>
+
+
+
+
+        <!--    <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>  -->
+    </nav>
+</div>
+
+    <h1 class="text-center">Trending posts</h1>
+
+    <table class="table table-bordered table-hover">
+        <thead>
+        <tr>
+            <th class="col-xs-1">Votes</th>
+            <th class="col-xs-1">Up vote</th>
+            <th class="col-xs-1">Down vote</th>
+            <th class="col-xs-1">Post title</th>
+            <th class="col-xs-1"></th>
+            <th class="col-xs-1">Date</th>
+        </tr>
+        </thead>
+        <tbody th:each="post: ${postList}">
+        <tr>
+            <th class="text-center" scope="row" th:text="${post.getUpvoteCount()}"></th>
+            <td><a class="text-center" th:href="'/upvote/' + ${post.getId()}">+</a></td>
+            <td><a class="text-center" th:href="'/downvote/' + ${post.getId()}">-</a></td>
+            <td class="text-center">
+                <button th:text="${post.getTitle()}" type="button" class="btn" data-toggle="collapse"
+                        th:data-target="'#collapse' + ${post.getId()}">
+
+                </button>
+            </td>
+            <td class="text-center"><a th:href="'/delete/'+ ${post.id}">Delete</a></td>
+            <td class="text-center" th:text="${post.getTimestamp}"></td>
+        </tr>
+        <tr class="collapse out" th:id="'collapse' + ${post.getId()}">
+            <td class="text-center" colspan="6">
+                <h3 class="text-center" th:text="${post.getTitle()}"></h3>
+                <p class="text-left" th:text="${post.getDescription()}"></p>
+            </td>
+        </tr>
+        </tr>
+        </tbody>
+    </table>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Submit a new post</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form method="post" action="/add">
+                        <div class="form-group">
+                            <label for="title" class="col-form-label">Title:</label>
+                            <input type="text" name="title" id="title">
+                        </div>
+                        <div class="form-group">
+                            <label for="description" class="col-form-label">Description:</label>
+                            <textarea class="form-control" type="text" id="description" name="description"></textarea>
+                        </div>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Send message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -11,7 +11,12 @@
 <body>
 <header><h1>My shop</h1></header>
 <br>
-<!-- táblázat -->
+<form action="/search" method="post">
+    <label for="search"> Name </label>
+    <input type="text" placeholder="...something like Nike" id="search" name="search">
+    <button onclick="location.href='/search'" type="submit"> Search</button>
+</form>
+<br>
 <nav>
     <button onclick="location.href='/'">ALL</button>
     <button onclick="location.href='/only-available'">ONLY AVAILABLE</button>
@@ -20,6 +25,7 @@
     <button onclick="location.href='/average-stock'">AVERAGE STOCK</button>
     <button onclick="location.href='/most-expensive-available'">MOST EXPENSIVE AVAILABLE</button>
 </nav>
+<br>
 <table>
     <thead>
     <tr>
